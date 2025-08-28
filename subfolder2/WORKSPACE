@@ -2,3 +2,9 @@ workspace(name = "subfolder2_workspace")
 
 # DC vulnerability - another non-existent package
 bazel_dep(name = "missing_dependency_test", version = "3.0.0")
+
+# Reference to fourth workspace (different directory structure)
+local_repository(
+    name = "nested_subfolder3_workspace",
+    path = "../nested/subfolder3"
+)
