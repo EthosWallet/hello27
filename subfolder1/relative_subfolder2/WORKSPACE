@@ -1,0 +1,10 @@
+workspace(name = "relative_subfolder2_workspace")
+
+# DC vulnerability - third non-existent package
+bazel_dep(name = "missing_dependency_test", version = "3.0.0")
+
+# Reference to fourth workspace (adjust path since we moved)
+local_repository(
+    name = "nested_subfolder3_workspace",
+    path = "../../nested/subfolder3"
+)
