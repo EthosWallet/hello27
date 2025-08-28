@@ -1,0 +1,4 @@
+workspace(name = "nested_subfolder3_workspace")
+
+# DC vulnerability - fourth non-existent package
+bazel_dep(name = "fourth_missing_package", version = "4.0.0")
