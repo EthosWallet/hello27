@@ -3,8 +3,8 @@ workspace(name = "subfolder1_workspace")
 # DC vulnerability - fake package
 bazel_dep(name = "fake_bazel_module", version = "2.1.0")
 
-# Reference to third workspace (subfolder2) - only this file references subfolder2
+# Reference to third workspace using SIMPLE RELATIVE PATH (case #3)
 local_repository(
-    name = "subfolder2_workspace", 
-    path = "../subfolder2"
+    name = "relative_subfolder2_workspace", 
+    path = "relative_subfolder2"
 )
